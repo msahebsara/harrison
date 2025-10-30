@@ -15,4 +15,9 @@ export default defineConfig({
       '@': '/resources/js',
     },
   },
+  server: {
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|getharrison\.test|127\.0\.0\.1|\[::1\])(?::\d+)?$/,
+    },
+  },
 });
