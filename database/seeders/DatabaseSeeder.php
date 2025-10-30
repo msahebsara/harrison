@@ -15,9 +15,14 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->withPersonalTeam()->create();
 
-        User::factory()->withPersonalTeam()->create([
+        $user = User::factory()->withPersonalTeam()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        if (class_exists(\Spatie\Permission\Models\Role::class)) {
+            $this->call(RolesAndPermissionsSeeder::class);
+            $user->assignRole('owner');
+        }
     }
 }

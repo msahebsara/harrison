@@ -15,7 +15,9 @@
         "laravel/jetstream": "^5.3",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
-        "tightenco/ziggy": "^2.0"
+        "tightenco/ziggy": "^2.0",
+        "spatie/laravel-permission": "^6.10",
+        "laravel/cashier": "^15.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
